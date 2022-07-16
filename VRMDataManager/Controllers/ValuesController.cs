@@ -13,7 +13,8 @@ namespace VRMDataManager.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            var userName = RequestContext.Principal.Identity.Name;
+            return new string[] { "value1", "value2", userName };
         }
 
         // GET api/values/5
